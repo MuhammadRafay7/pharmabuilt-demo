@@ -1,15 +1,41 @@
 import type { Metadata } from "next";
+import { Check } from "lucide-react";
 import { ExternalCTA } from "@/components/ExternalCTA";
 import { Reveal } from "@/components/Reveal";
 import { EarningsCalculator } from "@/components/EarningsCalculator";
+import { ProfitGrowthChart } from "@/components/ProfitGrowthChart";
 import { FinalCTA } from "@/components/FinalCTA";
-import { CALENDLY_URL, PHARMABUILT_URL } from "@/lib/site";
+import { CALENDLY_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Earnings — PharmaBuilt Partners",
+  title: "How Much You Earn — PharmaBuilt Partners",
   description:
-    "Estimate the recurring revenue your practice could earn with the PharmaBuilt Partners program.",
+    "See exactly how much your practice can earn with the PharmaBuilt Partner Program — a high-margin, 30% recurring revenue stream with no inventory and no risk.",
 };
+
+// The flyer's headline example: adding just 10 new patients per month.
+const EXAMPLE = {
+  patients: 10,
+  subscription: 155,
+  monthlyRevenue: 1550,
+  monthlyProfit: 465,
+  annualProfit: 5580,
+};
+
+const BENEFITS = [
+  "No startup fees",
+  "No inventory",
+  "No risk",
+  "Just results",
+];
+
+function currency(n: number) {
+  return n.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  });
+}
 
 export default function EarningsPage() {
   return (
@@ -18,41 +44,98 @@ export default function EarningsPage() {
         <div className="container-page py-16 text-center sm:py-20">
           <Reveal>
             <span className="inline-block rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium uppercase tracking-wider text-muted-foreground">
-              Earnings Calculator
+              Practice Revenue Model
             </span>
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="mx-auto mt-5 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
-              See your earning potential
+              How much you earn
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
-              Move the sliders to model recurring revenue based on your patient
-              base and average order value.
+              The PharmaBuilt Partner Program creates a sustainable, high-margin
+              recurring revenue stream — while helping your patients achieve
+              better health. You earn 30% profit on every subscription.
             </p>
           </Reveal>
         </div>
       </section>
 
+      {/* Headline example — straight from the flyer */}
       <section className="container-page py-16 sm:py-20">
         <Reveal>
-          <EarningsCalculator />
+          <div className="mx-auto max-w-3xl rounded-2xl border border-border bg-card p-7 shadow-sm sm:p-9">
+            <p className="text-sm font-medium uppercase tracking-wider text-muted-foreground">
+              Example · adding just {EXAMPLE.patients} new patients per month
+            </p>
+            <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
+              <div>
+                <p className="text-xs text-muted-foreground">Avg. subscription</p>
+                <p className="mt-1 text-xl font-semibold tabular-nums">
+                  {currency(EXAMPLE.subscription)}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground">Monthly revenue</p>
+                <p className="mt-1 text-xl font-semibold tabular-nums">
+                  {currency(EXAMPLE.monthlyRevenue)}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground">Your 30% profit</p>
+                <p className="mt-1 text-xl font-semibold tabular-nums">
+                  {currency(EXAMPLE.monthlyProfit)}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs text-muted-foreground">Annual profit</p>
+                <p className="mt-1 text-xl font-semibold tabular-nums text-primary">
+                  {currency(EXAMPLE.annualProfit)}
+                </p>
+              </div>
+            </div>
+          </div>
         </Reveal>
 
+        {/* Interactive calculator */}
+        <Reveal delay={0.05}>
+          <div className="mt-12">
+            <EarningsCalculator />
+          </div>
+        </Reveal>
+
+        {/* Growth chart */}
+        <Reveal delay={0.05}>
+          <div className="mt-12">
+            <ProfitGrowthChart />
+          </div>
+        </Reveal>
+
+        {/* Benefits */}
+        <Reveal delay={0.05}>
+          <div className="mx-auto mt-12 flex max-w-3xl flex-wrap items-center justify-center gap-x-8 gap-y-3">
+            {BENEFITS.map((b) => (
+              <span
+                key={b}
+                className="flex items-center gap-2 text-sm font-medium text-foreground"
+              >
+                <Check className="h-4 w-4 text-primary" />
+                {b}
+              </span>
+            ))}
+          </div>
+        </Reveal>
+
+        {/* CTA */}
         <Reveal delay={0.1}>
           <div className="mx-auto mt-12 flex max-w-xl flex-col items-center gap-4 text-center">
             <p className="text-sm text-muted-foreground">
               Want numbers tailored to your exact practice?
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <ExternalCTA href={CALENDLY_URL} variant="primary">
-                Get Your Personalized Report
-              </ExternalCTA>
-              <ExternalCTA href={PHARMABUILT_URL} variant="secondary" showArrow>
-                See Products at PharmaBuilt
-              </ExternalCTA>
-            </div>
+            <ExternalCTA href={CALENDLY_URL} variant="primary">
+              Get Your Personalized Report
+            </ExternalCTA>
           </div>
         </Reveal>
       </section>

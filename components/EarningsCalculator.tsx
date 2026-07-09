@@ -4,8 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { TrendingUp } from "lucide-react";
 
-// Practitioners earn recurring revenue on each patient reorder.
-// Assumed monthly reorder rate and partner margin used purely for illustration.
+// PharmaBuilt Partner Program economics, mirrored from the Practice Revenue Model:
+// Partners earn 30% profit on every monthly subscription — recurring, no inventory.
 const MARGIN_RATE = 0.3;
 
 function currency(n: number) {
@@ -63,39 +63,48 @@ function Slider({
 }
 
 export function EarningsCalculator() {
-  const [patients, setPatients] = useState(60);
-  const [orderValue, setOrderValue] = useState(120);
+  // Defaults mirror the flyer's headline example: 10 new patients/mo at a $155 subscription.
+  const [patients, setPatients] = useState(10);
+  const [subscription, setSubscription] = useState(155);
 
-  const monthly = Math.round(patients * orderValue * MARGIN_RATE);
-  const yearly = monthly * 12;
+  const monthlyRevenue = patients * subscription;
+  const monthlyProfit = Math.round(monthlyRevenue * MARGIN_RATE);
+  const annualProfit = monthlyProfit * 12;
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr]">
       {/* Inputs */}
       <div className="rounded-2xl border border-border bg-card p-7 shadow-sm sm:p-9">
-        <h3 className="text-lg font-semibold">Estimate your revenue</h3>
+        <h3 className="text-lg font-semibold">Estimate your recurring profit</h3>
         <p className="mt-1 text-sm text-muted-foreground">
-          Adjust the sliders to match your practice.
+          You earn 30% on every subscription — every month, after month.
         </p>
         <div className="mt-8 space-y-8">
           <Slider
-            label="Active patients on a program"
+            label="New patients per month"
             value={patients}
-            min={10}
-            max={500}
+            min={5}
+            max={100}
             step={5}
             onChange={setPatients}
             format={(v) => `${v}`}
           />
           <Slider
-            label="Average order value"
-            value={orderValue}
-            min={40}
-            max={300}
+            label="Avg. monthly subscription"
+            value={subscription}
+            min={50}
+            max={400}
             step={5}
-            onChange={setOrderValue}
+            onChange={setSubscription}
             format={currency}
           />
+        </div>
+
+        <div className="mt-8 flex items-center justify-between rounded-xl border border-border bg-secondary/60 px-4 py-3">
+          <span className="text-sm text-muted-foreground">Monthly revenue</span>
+          <span className="text-base font-semibold tabular-nums">
+            {currency(monthlyRevenue)}
+          </span>
         </div>
       </div>
 
@@ -113,38 +122,39 @@ export function EarningsCalculator() {
           <div className="flex items-center gap-2 text-primary-foreground/70">
             <TrendingUp className="h-4 w-4" />
             <span className="text-xs font-medium uppercase tracking-wider">
-              Projected recurring revenue
+              Your 30% recurring profit
             </span>
           </div>
 
           <div className="mt-6">
             <p className="text-sm text-primary-foreground/70">Per month</p>
             <motion.p
-              key={monthly}
+              key={monthlyProfit}
               initial={{ opacity: 0.4, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.25 }}
               className="text-4xl font-semibold tabular-nums sm:text-5xl"
             >
-              {currency(monthly)}
+              {currency(monthlyProfit)}
             </motion.p>
           </div>
 
           <div className="mt-8 border-t border-primary-foreground/15 pt-6">
             <p className="text-sm text-primary-foreground/70">Per year</p>
             <motion.p
-              key={yearly}
+              key={annualProfit}
               initial={{ opacity: 0.4, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.25 }}
               className="text-3xl font-semibold tabular-nums sm:text-4xl"
             >
-              {currency(yearly)}
+              {currency(annualProfit)}
             </motion.p>
           </div>
 
           <p className="mt-8 text-xs leading-relaxed text-primary-foreground/60">
-            Projections are estimates. Actual results vary.
+            No startup fees. No inventory. No risk. Projections are estimates —
+            actual results vary.
           </p>
         </div>
       </div>

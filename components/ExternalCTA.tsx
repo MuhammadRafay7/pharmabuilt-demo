@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { CALENDLY_URL, PHARMABUILT_URL } from "@/lib/site";
+import { CALENDLY_URL } from "@/lib/site";
 
 type Variant = "primary" | "secondary" | "ghost";
 
@@ -56,9 +56,9 @@ export function CTAGroup({
       <ExternalCTA href={CALENDLY_URL} variant="primary">
         {primaryLabel}
       </ExternalCTA>
-      <ExternalCTA href={PHARMABUILT_URL} variant="secondary" showArrow>
+      <InternalCTA href="/earnings" variant="secondary">
         {secondaryLabel}
-      </ExternalCTA>
+      </InternalCTA>
     </div>
   );
 }

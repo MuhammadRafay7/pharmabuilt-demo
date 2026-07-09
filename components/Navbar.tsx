@@ -45,14 +45,12 @@ export function Navbar() {
 
         {/* Desktop CTAs */}
         <div className="hidden items-center gap-3 md:flex">
-          <a
-            href={PHARMABUILT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/earnings"
             className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            How Much You Earn <ArrowUpRight className="h-3.5 w-3.5" />
-          </a>
+            How Much You Earn
+          </Link>
           <a
             href={CALENDLY_URL}
             target="_blank"
