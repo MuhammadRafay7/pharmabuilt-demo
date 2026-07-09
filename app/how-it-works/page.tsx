@@ -48,7 +48,7 @@ const STEPS = [
 const FAQ_ITEMS: FaqItem[] = [
   {
     q: "How much does it cost to join?",
-    a: "Nothing upfront. There's zero cost to launch your branded site, and your own product orders always ship free. The program is designed to remove financial risk entirely.",
+    a: "It's always free. There's no cost — ever — to launch and run your branded site, and your own product orders always ship free. The program is designed to remove financial risk entirely.",
   },
   {
     q: "Do I have to hold inventory or ship anything?",

@@ -26,7 +26,7 @@ const TRUST_BADGES = [
 
 const STEPS = [
   { icon: CalendarClock, title: "Schedule a 15-min call", desc: "Book a quick intro to see if the program fits your practice." },
-  { icon: Globe, title: "We build your branded site", desc: "A polished site with your name, ready for your patients." },
+  { icon: Globe, title: "Your branded site — built free", desc: "A polished site with your name, ready for your patients, at no cost." },
   { icon: BadgeCheck, title: "Your own orders always free", desc: "Every order you place for yourself ships at no cost." },
   { icon: Repeat, title: "Earn on every recurring order", desc: "Passive, recurring revenue on each patient reorder." },
 ];
