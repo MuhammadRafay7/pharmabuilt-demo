@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowUpRight } from "lucide-react";
-import { NAV_LINKS, CALENDLY_URL, PHARMABUILT_URL } from "@/lib/site";
+import { Menu, X } from "lucide-react";
+import { NAV_LINKS, CALENDLY_URL } from "@/lib/site";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -99,14 +99,13 @@ export function Navbar() {
               >
                 Get a Call
               </a>
-              <a
-                href={PHARMABUILT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/earnings"
+                onClick={() => setOpen(false)}
                 className="inline-flex items-center justify-center gap-1 rounded-lg border border-border px-4 py-2.5 text-sm font-medium"
               >
-                How Much You Earn <ArrowUpRight className="h-3.5 w-3.5" />
-              </a>
+                How Much You Earn
+              </Link>
             </li>
           </ul>
         </div>
