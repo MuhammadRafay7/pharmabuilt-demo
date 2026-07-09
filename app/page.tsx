@@ -20,7 +20,7 @@ import { FinalCTA } from "@/components/FinalCTA";
 
 const TRUST_BADGES = [
   { icon: FlaskConical, label: "366 Clinical Studies Backed" },
-  { icon: ShieldCheck, label: "Zero Upfront Cost" },
+  { icon: ShieldCheck, label: "Always Free — No Cost, Ever" },
   { icon: BadgeCheck, label: "Fully White-Labelled" },
 ];
 
