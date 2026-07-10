@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Reveal } from "@/components/Reveal";
 
 export function SectionHeading({
@@ -7,7 +8,7 @@ export function SectionHeading({
   align = "center",
 }: {
   eyebrow?: string;
-  title: string;
+  title: ReactNode;
   subtitle?: string;
   align?: "center" | "left";
 }) {
@@ -19,7 +20,7 @@ export function SectionHeading({
           {eyebrow}
         </span>
       )}
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
+      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-primary sm:text-4xl">
         {title}
       </h2>
       {subtitle && (

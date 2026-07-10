@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { NAV_LINKS, PHARMABUILT_URL } from "@/lib/site";
+import { Logo } from "@/components/Logo";
 
 export function Footer() {
   return (
@@ -8,14 +9,7 @@ export function Footer() {
       <div className="container-page py-14">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <div className="max-w-sm">
-            <div className="flex items-center gap-2">
-              <span className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground text-sm font-bold">
-                P
-              </span>
-              <span className="text-base font-semibold tracking-tight">
-                PharmaBuilt Partners
-              </span>
-            </div>
+            <Logo variant="full" className="h-14 w-auto" />
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               A supplement program for healthcare practitioners — your own
               branded website, evidence-based protocols, and recurring revenue

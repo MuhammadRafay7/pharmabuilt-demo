@@ -7,7 +7,11 @@ export function PodcastEmbed() {
     <section className="container-page py-20 sm:py-28">
       <SectionHeading
         eyebrow="Learn More About Us"
-        title="Maximizing Healthspan"
+        title={
+          <>
+            Maximizing <span className="text-brand-green">Healthspan</span>
+          </>
+        }
         subtitle="FOF 185 | John Linss on the science of longevity, evidence-based supplementation, and building a practice patients trust."
       />
       <Reveal className="mx-auto mt-12 max-w-4xl">

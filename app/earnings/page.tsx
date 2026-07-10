@@ -22,6 +22,13 @@ const EXAMPLE = {
   annualProfit: 5580,
 };
 
+const HERO_STATS = [
+  { value: "30%", label: "Profit margin" },
+  { value: "Recurring", label: "Every month" },
+  { value: "$0", label: "Inventory cost" },
+  { value: "No risk", label: "No startup fees" },
+];
+
 const BENEFITS = [
   "No startup fees",
   "No inventory",
@@ -48,8 +55,8 @@ export default function EarningsPage() {
             </span>
           </Reveal>
           <Reveal delay={0.05}>
-            <h1 className="mx-auto mt-5 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
-              How much you earn
+            <h1 className="mx-auto mt-5 max-w-2xl text-4xl font-semibold tracking-tight text-primary sm:text-5xl">
+              How much you <span className="text-brand-green">earn</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
@@ -58,6 +65,20 @@ export default function EarningsPage() {
               recurring revenue stream — while helping your patients achieve
               better health. You earn 30% profit on every subscription.
             </p>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <dl className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
+              {HERO_STATS.map((stat) => (
+                <div key={stat.label}>
+                  <dt className="text-2xl font-semibold tabular-nums text-primary sm:text-3xl">
+                    {stat.value}
+                  </dt>
+                  <dd className="mt-1 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                    {stat.label}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </Reveal>
         </div>
       </section>

@@ -46,6 +46,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="bg-grid pointer-events-none absolute inset-0" />
+        <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-[36rem] max-w-full -translate-x-1/2 rounded-full bg-brand-green/10 blur-3xl" />
         <div className="container-page relative pb-16 pt-20 sm:pb-24 sm:pt-28">
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
@@ -56,9 +57,14 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.05}>
               <h1 className="mt-6 text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl">
-                Supplements That Earn Up to{" "}
-                <span className="whitespace-nowrap">$100k</span> in Your First
-                Year
+                <span className="text-primary">
+                  Supplements That Earn Up to{" "}
+                  <span className="relative whitespace-nowrap text-brand-green">
+                    $100k
+                    <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-brand-green/30" />
+                  </span>{" "}
+                  in Your First Year
+                </span>
               </h1>
             </Reveal>
             <Reveal delay={0.1}>
@@ -81,7 +87,7 @@ export default function HomePage() {
                   key={label}
                   className="flex items-center justify-center gap-2.5 rounded-lg border border-border bg-card px-4 py-3.5 text-sm font-medium shadow-sm"
                 >
-                  <Icon className="h-5 w-5 shrink-0 text-foreground" strokeWidth={1.75} />
+                  <Icon className="h-5 w-5 shrink-0 text-brand-green" strokeWidth={1.75} />
                   <span>{label}</span>
                 </div>
               ))}
@@ -95,7 +101,12 @@ export default function HomePage() {
         <div className="container-page py-20 sm:py-28">
           <SectionHeading
             eyebrow="How It Works"
-            title="Four steps to recurring revenue"
+            title={
+              <>
+                Four steps to recurring{" "}
+                <span className="text-brand-green">revenue</span>
+              </>
+            }
             subtitle="From intro call to passive income — we handle the heavy lifting."
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -123,7 +134,12 @@ export default function HomePage() {
       <section className="container-page py-20 sm:py-28">
         <SectionHeading
           eyebrow="What You Get"
-          title="Everything you need, nothing you don't"
+          title={
+            <>
+              <span className="text-brand-green">Everything</span> you need,
+              nothing you don&apos;t
+            </>
+          }
           subtitle="A complete supplement program that runs itself — so you can focus on patients."
         />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

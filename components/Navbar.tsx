@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS, CALENDLY_URL } from "@/lib/site";
+import { Logo } from "@/components/Logo";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -13,13 +14,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/70 bg-background/80 backdrop-blur-md">
       <nav className="container-page flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground text-sm font-bold">
-            P
-          </span>
-          <span className="text-base font-semibold tracking-tight">
-            PharmaBuilt<span className="text-muted-foreground"> Partners</span>
-          </span>
+        <Link href="/" onClick={() => setOpen(false)}>
+          <Logo />
         </Link>
 
         {/* Desktop links */}

@@ -21,8 +21,9 @@ export default function ContactPage() {
             </span>
           </Reveal>
           <Reveal delay={0.05}>
-            <h1 className="mx-auto mt-5 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
-              Let&apos;s start the conversation
+            <h1 className="mx-auto mt-5 max-w-2xl text-4xl font-semibold tracking-tight text-primary sm:text-5xl">
+              Let&apos;s start the{" "}
+              <span className="text-brand-green">conversation</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>

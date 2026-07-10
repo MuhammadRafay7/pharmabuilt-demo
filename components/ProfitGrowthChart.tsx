@@ -87,7 +87,7 @@ export function ProfitGrowthChart() {
                   initial={{ height: 0 }}
                   animate={{ height: `${height}%` }}
                   transition={{ duration: 0.5, delay: i * 0.05, ease: "easeOut" }}
-                  className="w-full rounded-t-md bg-primary"
+                  className="w-full rounded-t-md bg-gradient-to-t from-primary to-brand-green"
                 />
               </div>
               <span className="mt-3 text-xs font-medium tabular-nums text-foreground">

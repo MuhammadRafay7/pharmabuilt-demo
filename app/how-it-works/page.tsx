@@ -80,8 +80,9 @@ export default function HowItWorksPage() {
             </span>
           </Reveal>
           <Reveal delay={0.05}>
-            <h1 className="mx-auto mt-5 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
-              A program that runs itself
+            <h1 className="mx-auto mt-5 max-w-2xl text-4xl font-semibold tracking-tight text-primary sm:text-5xl">
+              A program that{" "}
+              <span className="text-brand-green">runs itself</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
@@ -135,7 +136,11 @@ export default function HowItWorksPage() {
         <div className="container-page py-20 sm:py-24">
           <SectionHeading
             eyebrow="FAQ"
-            title="Questions, answered"
+            title={
+              <>
+                Questions, <span className="text-brand-green">answered</span>
+              </>
+            }
             subtitle="Everything practitioners ask before their first call."
           />
           <div className="mt-12">
