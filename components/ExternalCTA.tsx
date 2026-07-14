@@ -45,18 +45,20 @@ export function ExternalCTA({
 export function CTAGroup({
   className = "",
   primaryLabel = "Get a Call",
-  secondaryLabel = "How Much You Earn",
+  secondaryLabel = "How It Works",
+  secondaryHref = "/how-it-works",
 }: {
   className?: string;
   primaryLabel?: string;
   secondaryLabel?: string;
+  secondaryHref?: string;
 }) {
   return (
     <div className={`flex flex-col gap-3 sm:flex-row ${className}`}>
       <ExternalCTA href={CALENDLY_URL} variant="primary">
         {primaryLabel}
       </ExternalCTA>
-      <InternalCTA href="/earnings" variant="secondary">
+      <InternalCTA href={secondaryHref} variant="secondary">
         {secondaryLabel}
       </InternalCTA>
     </div>

@@ -48,7 +48,6 @@ export function Logo({
       />
       <span className="text-base font-semibold tracking-tight text-primary">
         PharmaBuilt
-        <span className="text-brand-green"> Partners</span>
       </span>
     </span>
   );

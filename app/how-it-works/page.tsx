@@ -13,9 +13,9 @@ import { Faq, type FaqItem } from "@/components/Faq";
 import { FinalCTA } from "@/components/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "How It Works — PharmaBuilt Partners",
+  title: "How It Works — PharmaBuilt",
   description:
-    "From a 15-minute call to recurring revenue. See exactly how the PharmaBuilt Partners program works, step by step.",
+    "From a 15-minute call to recurring revenue. See exactly how the PharmaBuilt Partner Program works, step by step.",
 };
 
 const STEPS = [
@@ -92,7 +92,11 @@ export default function HowItWorksPage() {
             </p>
           </Reveal>
           <Reveal delay={0.15}>
-            <CTAGroup className="mt-8 justify-center" />
+            <CTAGroup
+              className="mt-8 justify-center"
+              secondaryLabel="Talk to Us"
+              secondaryHref="/contact"
+            />
           </Reveal>
         </div>
       </section>

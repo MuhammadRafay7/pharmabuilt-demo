@@ -10,11 +10,12 @@ import {
   ShieldCheck,
   FlaskConical,
   Sparkles,
+  ArrowUpRight,
 } from "lucide-react";
+import { STOREFRONT_DEMO_URL } from "@/lib/site";
 import { CTAGroup } from "@/components/ExternalCTA";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
-import { PartnerCarousel } from "@/components/PartnerCarousel";
 import { PodcastEmbed } from "@/components/PodcastEmbed";
 import { FinalCTA } from "@/components/FinalCTA";
 
@@ -76,6 +77,20 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.15}>
               <CTAGroup className="mt-9 justify-center" />
+            </Reveal>
+            <Reveal delay={0.2}>
+              <p className="mt-5 text-sm text-muted-foreground">
+                Curious what your patients would see?{" "}
+                <a
+                  href={STOREFRONT_DEMO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  See a live storefront demo
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </a>
+              </p>
             </Reveal>
           </div>
 
@@ -157,16 +172,6 @@ export default function HomePage() {
             </Reveal>
           ))}
         </div>
-      </section>
-
-      {/* PARTNER LOGOS */}
-      <section className="border-y border-border bg-secondary/30 py-16">
-        <div className="container-page">
-          <p className="mb-10 text-center text-sm font-medium uppercase tracking-wider text-muted-foreground">
-            Trusted by Leading Practitioners
-          </p>
-        </div>
-        <PartnerCarousel />
       </section>
 
       {/* PODCAST */}

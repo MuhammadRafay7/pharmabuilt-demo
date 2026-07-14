@@ -1,6 +1,6 @@
 import { ExternalCTA } from "@/components/ExternalCTA";
 import { Reveal } from "@/components/Reveal";
-import { CALENDLY_URL, PHARMABUILT_URL } from "@/lib/site";
+import { CALENDLY_URL } from "@/lib/site";
 
 export function FinalCTA({
   title = "Ready to see your earning potential?",
@@ -38,14 +38,6 @@ export function FinalCTA({
               >
                 Schedule Your Free Call
               </ExternalCTA>
-              <a
-                href={PHARMABUILT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-primary-foreground/80 underline-offset-4 hover:text-primary-foreground hover:underline"
-              >
-                Learn more at PharmaBuilt →
-              </a>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { CookieConsent } from "@/components/CookieConsent";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PharmaBuilt Partners — Supplements That Earn",
+  title: "PharmaBuilt — Supplements That Earn",
   description:
     "A supplement program for healthcare practitioners. Your own branded website, evidence-based protocols, and recurring revenue with zero cost, inventory, or fulfillment.",
   icons: {
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

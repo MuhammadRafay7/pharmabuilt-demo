@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { NAV_LINKS, CALENDLY_URL } from "@/lib/site";
+import { NAV_LINKS, CALENDLY_URL, STOREFRONT_DEMO_URL } from "@/lib/site";
 import { Logo } from "@/components/Logo";
 
 export function Navbar() {
@@ -41,12 +41,14 @@ export function Navbar() {
 
         {/* Desktop CTAs */}
         <div className="hidden items-center gap-3 md:flex">
-          <Link
-            href="/earnings"
+          <a
+            href={STOREFRONT_DEMO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            How Much You Earn
-          </Link>
+            Storefront Demo
+          </a>
           <a
             href={CALENDLY_URL}
             target="_blank"
@@ -95,13 +97,14 @@ export function Navbar() {
               >
                 Get a Call
               </a>
-              <Link
-                href="/earnings"
-                onClick={() => setOpen(false)}
+              <a
+                href={STOREFRONT_DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-1 rounded-lg border border-border px-4 py-2.5 text-sm font-medium"
               >
-                How Much You Earn
-              </Link>
+                Storefront Demo
+              </a>
             </li>
           </ul>
         </div>

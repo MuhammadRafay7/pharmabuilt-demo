@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { Check } from "lucide-react";
 import { ExternalCTA } from "@/components/ExternalCTA";
 import { Reveal } from "@/components/Reveal";
 import { EarningsCalculator } from "@/components/EarningsCalculator";
 import { ProfitGrowthChart } from "@/components/ProfitGrowthChart";
 import { FinalCTA } from "@/components/FinalCTA";
+import { EarningsGate } from "@/components/EarningsGate";
 import { CALENDLY_URL } from "@/lib/site";
 
+// Unlisted, password-gated page — keep it out of search results.
 export const metadata: Metadata = {
-  title: "How Much You Earn — PharmaBuilt Partners",
+  title: "How Much You Earn — PharmaBuilt",
   description:
     "See exactly how much your practice can earn with the PharmaBuilt Partner Program — a high-margin, 30% recurring revenue stream with no inventory and no risk.",
+  robots: { index: false, follow: false },
 };
 
 // The flyer's headline example: adding just 10 new patients per month.
@@ -45,6 +49,11 @@ function currency(n: number) {
 }
 
 export default function EarningsPage() {
+  const unlocked = cookies().get("earnings_access")?.value === "granted";
+  if (!unlocked) {
+    return <EarningsGate />;
+  }
+
   return (
     <>
       <section className="border-b border-border">

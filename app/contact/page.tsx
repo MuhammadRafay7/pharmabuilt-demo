@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { CalendarClock, ArrowUpRight, Mail, Phone } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { ContactForm } from "@/components/ContactForm";
-import { CALENDLY_URL, PHARMABUILT_URL } from "@/lib/site";
+import { CALENDLY_URL, STOREFRONT_DEMO_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact — PharmaBuilt Partners",
+  title: "Contact — PharmaBuilt",
   description:
-    "Get in touch with the PharmaBuilt Partners team, or schedule a free 15-minute call.",
+    "Get in touch with the PharmaBuilt team, or schedule a free 15-minute call.",
 };
 
 export default function ContactPage() {
@@ -86,12 +86,12 @@ export default function ContactPage() {
                 </div>
                 <div className="mt-6 border-t border-border pt-5">
                   <a
-                    href={PHARMABUILT_URL}
+                    href={STOREFRONT_DEMO_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-sm font-medium hover:underline"
                   >
-                    Prefer to browse? Visit PharmaBuilt
+                    See a live storefront demo
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
                 </div>

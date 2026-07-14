@@ -67,4 +67,27 @@
     -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
     mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
   }
+
+  /* Long-form legal / policy copy */
+  .legal-content {
+    @apply text-muted-foreground;
+  }
+  .legal-content h2 {
+    @apply mt-10 mb-3 text-xl font-semibold tracking-tight text-foreground;
+  }
+  .legal-content h3 {
+    @apply mt-6 mb-2 text-base font-semibold text-foreground;
+  }
+  .legal-content p {
+    @apply mb-4 text-sm leading-relaxed;
+  }
+  .legal-content ul {
+    @apply mb-4 list-disc space-y-1 pl-6 text-sm leading-relaxed;
+  }
+  .legal-content ol {
+    @apply mb-4 list-decimal space-y-1 pl-6 text-sm leading-relaxed;
+  }
+  .legal-content a {
+    @apply font-medium text-primary underline underline-offset-2;
+  }
 }

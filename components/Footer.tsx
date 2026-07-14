@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { NAV_LINKS, PHARMABUILT_URL } from "@/lib/site";
+import { NAV_LINKS, LEGAL_LINKS, STOREFRONT_DEMO_URL } from "@/lib/site";
 import { Logo } from "@/components/Logo";
+import { CookieSettingsButton } from "@/components/CookieConsent";
 
 export function Footer() {
   return (
@@ -31,21 +32,34 @@ export function Footer() {
                     </Link>
                   </li>
                 ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-sm font-medium">Learn More</h4>
-              <ul className="mt-4 space-y-3">
                 <li>
                   <a
-                    href={PHARMABUILT_URL}
+                    href={STOREFRONT_DEMO_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    Powered by PharmaBuilt <ArrowUpRight className="h-3.5 w-3.5" />
+                    Storefront Demo <ArrowUpRight className="h-3.5 w-3.5" />
                   </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-sm font-medium">Legal</h4>
+              <ul className="mt-4 space-y-3">
+                {LEGAL_LINKS.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <CookieSettingsButton className="text-sm text-muted-foreground transition-colors hover:text-foreground" />
                 </li>
               </ul>
             </div>
@@ -53,17 +67,10 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} PharmaBuilt Partners. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} PharmaBuilt. All rights reserved.</p>
           <p>
-            Powered by{" "}
-            <a
-              href={PHARMABUILT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-foreground hover:underline"
-            >
-              PharmaBuilt
-            </a>
+            These statements have not been evaluated by the FDA. Products are not
+            intended to diagnose, treat, cure, or prevent any disease.
           </p>
         </div>
       </div>

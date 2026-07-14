@@ -5,6 +5,10 @@ export const CALENDLY_URL =
 
 export const PHARMABUILT_URL = "https://pharmabuilt.com";
 
+// The live PharmaBuilt storefront — the branded e-commerce site partners get.
+// Used for the "Storefront Demo" link and anywhere we point to the store.
+export const STOREFRONT_DEMO_URL = "https://pharmabuilt.com";
+
 // Podcast: "FOF 185 | John Linss. Maximizing Healthspan."
 // https://www.youtube.com/watch?v=EP9XAxjNAvo
 export const PODCAST_EMBED_ID = "EP9XAxjNAvo";
@@ -31,6 +35,12 @@ export const PARTNER_TENANTS: { name: string; logo: string }[] = [
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "How It Works", href: "/how-it-works" },
-  { label: "Earnings", href: "/earnings" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
+];
+
+export const LEGAL_LINKS = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Use", href: "/terms" },
+  { label: "Cookie Policy", href: "/cookies" },
 ];
