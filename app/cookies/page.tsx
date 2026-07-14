@@ -85,7 +85,7 @@ export default function CookiesPage() {
       <p>
         If you have any questions about our use of cookies or this Cookie Policy,
         please contact us at{" "}
-        <a href="mailto:partners@pharmabuilt.com">partners@pharmabuilt.com</a>.
+        <a href="mailto:support@pharmabuilt.com">support@pharmabuilt.com</a>.
       </p>
     </LegalShell>
   );

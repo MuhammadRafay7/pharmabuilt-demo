@@ -159,7 +159,7 @@ export default function TermsPage() {
       <h2>Contact Us</h2>
       <p>
         If you have any questions about these Terms of Use, please contact us at{" "}
-        <a href="mailto:partners@pharmabuilt.com">partners@pharmabuilt.com</a>.
+        <a href="mailto:support@pharmabuilt.com">support@pharmabuilt.com</a>.
       </p>
     </LegalShell>
   );

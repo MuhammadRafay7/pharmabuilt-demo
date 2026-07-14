@@ -77,11 +77,11 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 text-sm">
                     <Mail className="h-5 w-5 text-muted-foreground" strokeWidth={1.75} />
-                    <span>partners@pharmabuilt.com</span>
+                    <span>support@pharmabuilt.com</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm">
                     <Phone className="h-5 w-5 text-muted-foreground" strokeWidth={1.75} />
-                    <span>(555) 010-2040</span>
+                    <span>(833) 255-8654</span>
                   </div>
                 </div>
                 <div className="mt-6 border-t border-border pt-5">

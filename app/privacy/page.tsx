@@ -157,7 +157,7 @@ export default function PrivacyPage() {
       <p>
         If you have any questions about this Privacy Policy or our privacy
         practices, please contact us at{" "}
-        <a href="mailto:partners@pharmabuilt.com">partners@pharmabuilt.com</a>.
+        <a href="mailto:support@pharmabuilt.com">support@pharmabuilt.com</a>.
       </p>
     </LegalShell>
   );
