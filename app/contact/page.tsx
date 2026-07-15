@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { CalendarClock, ArrowUpRight, Mail, Phone } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
-import { ContactForm } from "@/components/ContactForm";
 import { CALENDLY_URL, STOREFRONT_DEMO_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -28,17 +27,53 @@ export default function ContactPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">
-              Send us a note, or skip ahead and book a free 15-minute call with
-              our team.
+              Book a free 15-minute call with our team, or reach us directly
+              using the details below.
             </p>
           </Reveal>
         </div>
       </section>
 
       <section className="container-page py-16 sm:py-20">
-        <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr]">
+        <div className="grid items-start gap-8 lg:grid-cols-[1.3fr_1fr]">
+          {/* What to expect */}
           <Reveal>
-            <ContactForm />
+            <div className="rounded-2xl border border-border bg-card p-7 shadow-sm sm:p-9">
+              <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+                What to expect on your call
+              </h2>
+              <p className="mt-3 max-w-md text-muted-foreground">
+                A quick, no-pressure intro call — here&apos;s how it goes.
+              </p>
+              <ul className="mt-8 space-y-6">
+                {[
+                  {
+                    title: "We learn about your practice",
+                    desc: "Tell us about your patient base and how you work today.",
+                  },
+                  {
+                    title: "You see realistic projections",
+                    desc: "We map out what the program could earn for your practice.",
+                  },
+                  {
+                    title: "We plan your next steps",
+                    desc: "Walk away with a clear path to your branded site — no commitment.",
+                  },
+                ].map((step, i) => (
+                  <li key={step.title} className="flex gap-4">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary text-sm font-semibold text-primary-foreground">
+                      {i + 1}
+                    </span>
+                    <div>
+                      <h3 className="text-base font-semibold">{step.title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                        {step.desc}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </Reveal>
 
           <Reveal delay={0.08}>

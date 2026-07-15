@@ -28,14 +28,14 @@ const STEPS = [
   {
     icon: Globe,
     title: "We build your branded site",
-    desc: "Our team designs and launches a premium, white-labelled website carrying your name and brand. It's patient-ready from day one — you don't write a line of code or touch a design tool.",
-    points: ["Fully white-labelled", "Patient-ready protocols", "Launched for you"],
+    desc: "Our team designs and launches a premium, white-labeled website carrying your name and brand. It's patient-ready from day one — you don't write a line of code or touch a design tool.",
+    points: ["Fully white-labeled", "Patient-ready protocols", "Launched for you"],
   },
   {
     icon: BadgeCheck,
-    title: "Your own orders always free",
-    desc: "Every supplement order you place for yourself ships completely free. Use the exact products you recommend, so your guidance stays authentic and firsthand.",
-    points: ["Zero cost to you", "Use what you recommend", "No minimums"],
+    title: "Onboard to the Success Program",
+    desc: "You and your staff receive an \"Easy Button\" process that improves your Standard of Care with science-based supplements.",
+    points: ["250 page Mechanism of Action reference guide", "Structured Clinical Growth Platform", "Ongoing Updates and Staff Training"],
   },
   {
     icon: Repeat,
@@ -48,7 +48,7 @@ const STEPS = [
 const FAQ_ITEMS: FaqItem[] = [
   {
     q: "How much does it cost to join?",
-    a: "It's always free. There's no cost — ever — to launch and run your branded site, and your own product orders always ship free. The program is designed to remove financial risk entirely.",
+    a: "It's always free. There's no cost — ever — to launch and run your branded site. The program is designed to remove financial risk entirely.",
   },
   {
     q: "Do I have to hold inventory or ship anything?",
@@ -64,7 +64,7 @@ const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: "How long does it take to get set up?",
-    a: "Most practitioners are up and running shortly after their intro call. We handle the site build and configuration, so you can start recommending products almost immediately.",
+    a: "Most providers are up and running shortly after their intro call. We handle the site build and configuration, so you can start recommending products almost immediately.",
   },
 ];
 
@@ -145,7 +145,7 @@ export default function HowItWorksPage() {
                 Questions, <span className="text-brand-green">answered</span>
               </>
             }
-            subtitle="Everything practitioners ask before their first call."
+            subtitle="Everything providers ask before their first call."
           />
           <div className="mt-12">
             <Faq items={FAQ_ITEMS} />

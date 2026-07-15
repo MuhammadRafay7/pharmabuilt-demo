@@ -44,7 +44,7 @@ export function ExternalCTA({
 /** The two canonical CTAs reused across pages. */
 export function CTAGroup({
   className = "",
-  primaryLabel = "Get a Call",
+  primaryLabel = "Schedule a Call",
   secondaryLabel = "How It Works",
   secondaryHref = "/how-it-works",
 }: {

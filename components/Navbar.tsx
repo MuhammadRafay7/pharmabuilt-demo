@@ -55,7 +55,7 @@ export function Navbar() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:opacity-90 hover:shadow-md"
           >
-            Get a Call
+            Schedule a Call
           </a>
         </div>
 
@@ -95,7 +95,7 @@ export function Navbar() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground"
               >
-                Get a Call
+                Schedule a Call
               </a>
               <a
                 href={STOREFRONT_DEMO_URL}

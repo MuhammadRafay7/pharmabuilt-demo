@@ -16,7 +16,7 @@ import { FinalCTA } from "@/components/FinalCTA";
 export const metadata: Metadata = {
   title: "About — PharmaBuilt",
   description:
-    "PharmaBuilt helps healthcare practitioners offer evidence-based supplements through their own branded storefront — with zero cost, inventory, or fulfillment. Learn about our mission and how we work.",
+    "PharmaBuilt helps healthcare providers offer evidence-based supplements through their own branded storefront — with zero cost, inventory, or fulfillment. Learn about our mission and how we work.",
 };
 
 const VALUES = [
@@ -28,11 +28,11 @@ const VALUES = [
   {
     icon: HeartPulse,
     title: "Better Patient Outcomes",
-    desc: "The program only works when patients feel the difference. Real clinical results keep them reordering, month after month.",
+    desc: "The program only works when patients feel the difference. Real results keep them reordering, month after month.",
   },
   {
     icon: ShieldCheck,
-    title: "No Risk to Practitioners",
+    title: "No Risk to Providers",
     desc: "No startup fees, no inventory, no fulfillment. We remove the financial risk so you can focus on care, not logistics.",
   },
   {
@@ -43,10 +43,10 @@ const VALUES = [
 ];
 
 const STATS = [
-  { value: "366", label: "Clinical studies backed" },
-  { value: "30%", label: "Recurring partner profit" },
+  { value: "366", label: "Clinical studies" },
+  { value: "$$$", label: "Recurring partner profit" },
   { value: "$0", label: "Cost to get started" },
-  { value: "100%", label: "White-labelled" },
+  { value: "100%", label: "White-labeled" },
 ];
 
 export default function AboutPage() {
@@ -70,7 +70,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              PharmaBuilt gives healthcare practitioners a turnkey way to offer
+              PharmaBuilt gives providers a turnkey way to offer
               evidence-based supplements under their own brand — without the cost,
               inventory, or fulfillment headaches of running a store.
             </p>
@@ -101,12 +101,12 @@ export default function AboutPage() {
                   </p>
                   <p className="mt-3 text-xl font-semibold leading-snug">
                     Put the value of trusted health guidance back where it
-                    belongs — with the practitioner.
+                    belongs — with the provider.
                   </p>
                   <ul className="mt-6 space-y-2.5 border-t border-primary-foreground/15 pt-6">
                     {[
                       "Evidence-based protocols",
-                      "Fully white-labelled",
+                      "Fully white-labeled",
                       "Zero inventory or fulfillment",
                     ].map((point) => (
                       <li
@@ -128,7 +128,7 @@ export default function AboutPage() {
                 Why we built PharmaBuilt
               </h3>
               <p className="mt-5 text-lg leading-relaxed text-foreground">
-                Practitioners have always been the most trusted source of health
+                Providers have always been the most trusted source of health
                 guidance. Yet when it comes to the supplements they recommend, the
                 value has historically flowed to retailers and manufacturers —
                 never to the clinician who built the trust.
@@ -136,7 +136,7 @@ export default function AboutPage() {
               <div className="mt-4 space-y-4 text-base leading-relaxed text-muted-foreground">
                 <p>
                   PharmaBuilt exists to change that. We handle the hard parts —
-                  sourcing clinically-backed formulations, building your branded
+                  manufacturing clinically-backed formulations, building your branded
                   storefront, and automating fulfillment — so you can recommend
                   products with confidence and earn recurring revenue on every
                   reorder.

@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "PharmaBuilt — Supplements That Earn",
   description:
-    "A supplement program for healthcare practitioners. Your own branded website, evidence-based protocols, and recurring revenue with zero cost, inventory, or fulfillment.",
+    "A supplement program for healthcare providers. Your own branded website, evidence-based protocols, and recurring revenue with zero cost, inventory, or fulfillment.",
   icons: {
     icon: "/brand/pharmabuilt-favicon.jpg",
   },

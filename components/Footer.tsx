@@ -12,7 +12,7 @@ export function Footer() {
           <div className="max-w-sm">
             <Logo variant="full" className="h-14 w-auto" />
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              A supplement program for healthcare practitioners — your own
+              A supplement program for healthcare providers — your own
               branded website, evidence-based protocols, and recurring revenue
               with zero cost, inventory, or fulfillment on your end.
             </p>

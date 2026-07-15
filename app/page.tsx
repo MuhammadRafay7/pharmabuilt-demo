@@ -20,15 +20,15 @@ import { PodcastEmbed } from "@/components/PodcastEmbed";
 import { FinalCTA } from "@/components/FinalCTA";
 
 const TRUST_BADGES = [
-  { icon: FlaskConical, label: "366 Clinical Studies Backed" },
-  { icon: ShieldCheck, label: "Always Free — No Cost, Ever" },
-  { icon: BadgeCheck, label: "Fully White-Labelled" },
+  { icon: FlaskConical, label: "Backed by 366 Clinical Studies" },
+  { icon: ShieldCheck, label: "No Cost to Provider Ever" },
+  { icon: BadgeCheck, label: "Fully White Labeled" },
 ];
 
 const STEPS = [
   { icon: CalendarClock, title: "Schedule a 15-min call", desc: "Book a quick intro to see if the program fits your practice." },
   { icon: Globe, title: "Your branded site — built free", desc: "A polished site with your name, ready for your patients, at no cost." },
-  { icon: BadgeCheck, title: "Your own orders always free", desc: "Every order you place for yourself ships at no cost." },
+  { icon: BadgeCheck, title: "Onboard to the Success Program", desc: "You and your staff receive an \"Easy Button\" process that improves your Standard of Care with science-based supplements." },
   { icon: Repeat, title: "Earn on every recurring order", desc: "Passive, recurring revenue on each patient reorder." },
 ];
 
@@ -38,7 +38,7 @@ const BENEFITS = [
   { icon: Boxes, title: "Zero Inventory Risk", desc: "No stock to buy, store, or manage — ever." },
   { icon: Zap, title: "Automated Fulfillment", desc: "Orders are picked, packed, and shipped for you." },
   { icon: TrendingUp, title: "Recurring Revenue", desc: "Earn on every reorder, month after month." },
-  { icon: ClipboardList, title: "Patient-Ready Programs", desc: "Turn-ready programs designed for real clinical outcomes." },
+  { icon: ClipboardList, title: "Patient-Ready Programs", desc: "Training and Guides that map Patient needs to calibrated Protocols." },
 ];
 
 export default function HomePage() {
@@ -53,13 +53,13 @@ export default function HomePage() {
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-medium text-muted-foreground">
                 <Sparkles className="h-3.5 w-3.5" />
-                For healthcare practitioners
+                For Health, Wellness, and Fitness Providers
               </span>
             </Reveal>
             <Reveal delay={0.05}>
               <h1 className="mt-6 text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl">
                 <span className="text-primary">
-                  Supplements That Earn Up to{" "}
+                  A Turnkey Supplement Program That Can Earn Up to{" "}
                   <span className="relative whitespace-nowrap text-brand-green">
                     $100k
                     <span className="absolute -bottom-1 left-0 h-1 w-full rounded-full bg-brand-green/30" />
@@ -70,9 +70,9 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-                You receive a branded website with your name. Your first order is
-                free. Every order after provides recurring revenue — with zero
-                cost, inventory, or fulfillment on your end.
+                You receive a branded website with your brand with zero cost, no
+                inventory requirements or fulfillment on your end and fully
+                automated payment processing and monthly reporting.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
