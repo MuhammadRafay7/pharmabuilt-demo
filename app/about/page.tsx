@@ -144,9 +144,10 @@ export default function AboutPage() {
               </div>
               <div className="mt-6 rounded-xl border-l-2 border-brand-green bg-secondary/40 px-5 py-4">
                 <p className="text-base leading-relaxed text-foreground">
-                  The result is a program that helps your patients get healthier
-                  and helps your practice grow — with none of the operational risk
-                  of running an e-commerce business yourself.
+                  The result is a program that helps your patients achieve better
+                  health outcomes while growing your practice revenues, all without
+                  taking on the operational complexity and risk of running a
+                  supplements business yourself.
                 </p>
               </div>
             </div>
